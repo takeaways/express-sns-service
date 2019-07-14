@@ -1,0 +1,23 @@
+{
+  "name": "express-sns-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomadGeonilJang/express-sns-service.git"
+  },
+  "author": "GeonilJang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nomadGeonilJang/express-sns-service/issues"
+  },
+  "homepage": "https://github.com/nomadGeonilJang/express-sns-service#readme",
+  "dependencies": {
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.10.0"
+  }
+}
