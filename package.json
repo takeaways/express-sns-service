@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,17 @@
   },
   "homepage": "https://github.com/nomadGeonilJang/express-sns-service#readme",
   "dependencies": {
+    "antd": "^3.20.2",
     "mysql2": "^1.6.5",
+    "next": "^9.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "sequelize": "^5.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "nodemon": "^1.19.1",
+    "webpacks": "0.0.3"
   }
 }
