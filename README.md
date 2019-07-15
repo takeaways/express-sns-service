@@ -18,3 +18,11 @@
 ___
 
 8. prop-types : npm i prop-types
+
+9. 리덕스
+<pre>
+  <code>
+    변경될 여지가 있는 데이터는 => State!!
+    여기 저기에 있는 스테이트를 관리하기 위해서 사용! 
+  </code>
+</pre>
