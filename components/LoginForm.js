@@ -13,7 +13,7 @@ const LoginForm = () => {
 
 
   return (
-    <Form onSubmit={onSubmit} style={{padding:30}}>
+    <Form onSubmit={onSubmit} style={{padding:10}}>
       <div>
         <label htmlFor="user-id">ID</label>
         <br/>

@@ -8,7 +8,7 @@ import Profile from './Profile';
 
 const AppLayout = ({children}) => {
   const dummy = {
-    isLoggedIn:true,
+    isLoggedIn:false,
     nickname:"DevJang",
     Post:[],
     Followers:[],
@@ -30,7 +30,7 @@ const AppLayout = ({children}) => {
           <Input.Search enterButton style={{ verticalAlign: 'middle' }} />
         </Menu.Item>
       </Menu>
-      <Row>
+      <Row gutter={10}>
         <Col xs={24} md={6}>
           {dummy.isLoggedIn ? <Profile/>: <LoginForm/>}
         </Col>
@@ -38,7 +38,7 @@ const AppLayout = ({children}) => {
           {children}
         </Col>
         <Col xs={24} md={6}>
-          3
+          건일이 만듬
         </Col>
       </Row>
 
