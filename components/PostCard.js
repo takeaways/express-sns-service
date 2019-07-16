@@ -30,7 +30,7 @@ PostCard.propTypes = {
     User:PropTypes.object,
     content:PropTypes.string,
     img:PropTypes.string,
-    createdAt:PropTypes.object
+    createdAt:PropTypes.string
   })
 }
 

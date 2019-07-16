@@ -1,17 +1,25 @@
 import React, {useCallback} from 'react';
 import {Form, Button, Input} from 'antd';
 import {useInput} from '../pages/signup'
+import {useDispatch} from 'react-redux';
+import {LOG_IN} from '../reducers/user';
 
 const LoginForm = () => {
-
+  const dispatch  = useDispatch();
   const [id, onChangeId] = useInput('');
   const [password, onChangePassword] = useInput('');
   const onSubmit = useCallback((e) => {
     e.preventDefault();
-    console.log(id, password);
+    dispatch({
+      type:LOG_IN,
+      data:{
+        nickname:"GEONIL",
+        Post:[],
+        Followings:[],
+        Followers:[]
+      }
+    })
   },[id, password]);
-
-
   return (
     <Form onSubmit={onSubmit} style={{padding:10}}>
       <div>

@@ -1,36 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import PostForm from '../components/PostForm';
 import PostCard from '../components/PostCard';
+import {LOG_IN} from '../reducers/user';
 
-const dummy = {
-  User:{
-    nickname:"GeonilJang"
-  },
-  isLoggedIn : true,
-  imagePath:[],
-  mainPost:[
-    {
-      content:'',
-      createdAt:new Date(),
-      img:'',
-      User:{
-        id:1,
-        nickname:"GeonilJang",
-      }
-      ,content:"welcome"
-    }
-]
-}
 
 const Home = () => {
+  const {user ,isLoggedIn } = useSelector(state => state.user);
+  const { mainPosts } = useSelector(state => state.post);
   return (
     <div>
-      {dummy.isLoggedIn && <PostForm />}
-        {dummy.mainPost.map(c=>{
+      {isLoggedIn && <PostForm />}
+      {mainPosts.map((c,i)=>{
           return (
-            <PostCard key={c} post={c}/>
+            <PostCard key={i} post={c}/>
           )
-        })}
+      })}
     </div>
   )
 }
