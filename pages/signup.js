@@ -1,7 +1,7 @@
 import React, {useState, useCallback} from 'react';
 import {Form, Input, Checkbox, Button, Modal} from 'antd';
 import {useDispatch} from 'react-redux';
-import {signUpAction} from '../reducers/user';
+import {signUpRequestAction} from '../reducers/user';
 
   //customeHook
   export const useInput = (initValue = null) => {
@@ -50,7 +50,7 @@ const Signup = () => {
     if(!term){
       return setTermError(true);
     }
-    dispatch(signUpAction({id,password,nickname}));
+    dispatch(signUpRequestAction({id,password,nickname}));
   },[passwordCheck,password,term]);
 
   const onChangePasswordCheck = useCallback((e) => {

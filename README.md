@@ -57,7 +57,7 @@ ___
 
 11. react-redux 훅 npm i react-redux@next
 
-12. 리덕스 사가
+12. 리덕스 사가 (제너레이터 사용)
 <pre>
   <code>  
     리덕스는 모든게 동기로 이루어 진다!
@@ -70,6 +70,28 @@ ___
     -> 리덕스 썽크, 사가, 옵저버블
 
 
+                    -> success
+    login[redux] -(비동기:saga)-|
+                    -> failure
 
+  </code>
+</pre>
+
+13. function* (){ yield} yield는 중단점. 객체 생성후 .next() 로 실행
+yield* 는 뒤에 나오는 값을 iterable로 본다
+<pre>
+  <code>
+    function* generator(){
+      let i = 0;
+      while(true){
+        yield i++
+      }
+    }
+
+    const gen = generator();
+    gen.next() // +1
+
+
+    call : 동기 , fork : 비동기
   </code>
 </pre>
